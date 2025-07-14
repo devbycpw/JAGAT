@@ -1,0 +1,642 @@
+:root {
+  --bg-clr: #f5f5f4;
+  --primary: #3fc1c9;
+  --secondary: #163172;
+  --secondary-text: #005daa;
+  --bg-container: #fbfbfb;
+  --sidebar-width: 78px;
+  --sidebar-expanded-width: 250px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-clr);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* max-width: 1000px; */
+  margin: auto;
+}
+
+.logo-banner {
+  /* position: absolute; */
+  
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+.card {
+  margin-top: 3rem;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 16px rgba(63, 193, 201, 0.2);
+  border: none;
+}
+
+h2 {
+  color: var(--secondary);
+  font-size: 22px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.summary div {
+  flex: 1;
+}
+
+.summary h4 {
+  margin: 5px 0;
+  font-size: 24px;
+  color: #002f6c;
+}
+
+#multiRingChart {
+  width: 100%;
+  height: 100%;
+}
+
+.center-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  font-weight: bold;
+  color: #005daa;
+}
+
+.macro-section {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.chart-section {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #002f6c;
+}
+
+.legend {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-color {
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+.legend-label {
+  flex: 1;
+  color: #333;
+}
+
+.legend-value {
+  color: #333;
+}
+
+/* gpt */
+.card-aktivitas .aktivitas-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left-info {
+  flex: 1 1 60%;
+  color: var(--secondary);
+}
+
+.right-chart {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+/* gpt2 */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-align: center;
+  gap: 20px;
+}
+
+.item.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+}
+
+.summary .icon {
+  font-size: 28px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.summary .value {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 18px;
+  color: #002f6c;
+}
+
+.summary .angka {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.summary .satuan {
+  font-size: 16px;
+}
+
+/* makan */
+.card-makanan {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  color: #002f6c;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(63, 193, 201, 0.2);
+}
+
+.macro-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ─── Kiri: Judul & Total ─── */
+.macro-info h2 {
+  font-size: 20px;
+  color: #002f6c;
+  margin-bottom: 8px;
+}
+.total-kalori {
+  font-size: 28px;
+  font-weight: bold;
+  color: #002f6c;
+}
+
+/* ─── Kanan: Chart + Indikator ─── */
+.macro-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Chart */
+.chart-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.chart-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: #002f6c;
+}
+
+/* Indikator Karbo/Lemak/Protein */
+.macro-indicators {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #002f6c;
+}
+.indicator .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.indicator .label {
+  flex: 1;
+}
+
+/* ─── Footer: Target Kalori ─── */
+.macro-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  font-size: 14px;
+  color: #5c6b82;
+}
+.footer-value {
+  font-weight: bold;
+  color: #002f6c;
+}
+
+.bg-main {
+  background-color: var(--bg-clr);
+}
+
+/* tidur */
+.card-makanan {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  color: #002f6c;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(63, 193, 201, 0.2);
+  border: none;
+}
+.macro-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.total-kalori {
+  font-size: 28px;
+  font-weight: bold;
+  color: #002f6c;
+}
+.bar-wrapper {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bar-container {
+  position: relative;
+  height: 20px;
+  background-color: #999999;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.bar-fill {
+  background-color: #00bcd4;
+  height: 100%;
+  border-radius: 10px;
+}
+.bar-label {
+  position: absolute;
+  top: -28px;
+  background-color: #00bcd4;
+  color: white;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 12px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.bar-label::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #00bcd4 transparent transparent transparent;
+}
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555;
+  width: 100%;
+}
+.macro-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  font-size: 14px;
+  color: #5c6b82;
+  margin-top: 10px;
+}
+.footer-value {
+  font-weight: bold;
+  color: #002f6c;
+}
+
+.baca-juga {
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 50px;
+  color: var(--secondary); /* opsional: warna lebih ringan */
+}
+.baca-juga span {
+  display: block;
+  /* font-weight: normal; opsional: buat beda dengan h2 */
+  color: var(--secondary); /* opsional: warna lebih ringan */
+  font-weight: bold;
+}
+
+.text-justify {
+  margin-left: 50px;
+  margin-right: 40rem;
+  text-align: justify;
+  color: var(--secondary);
+  opacity: 0.8;
+}
+
+.zoom-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  aspect-ratio: 3 / 2; /* Tambahkan ini untuk jaga rasio */
+}
+
+.img-zoom-hover {
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  will-change: transform;
+}
+
+.zoom-wrapper:hover .img-zoom-hover {
+  transform: scale(1.1);
+}
+
+/* Area teks di atas gambar */
+.image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  box-sizing: border-box;
+}
+
+/* Judul default */
+.image-title {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.image-title .bi {
+  color: #ffb823;
+}
+
+/* Saat .zoom-wrapper (termasuk gambar) di-hover, ubah warna judul */
+.zoom-wrapper:hover .image-title {
+  color: #ffb823;
+  cursor: pointer;
+}
+
+.hover-wrapper:hover .img-zoom-hover {
+  transform: scale(1.1);
+}
+
+.container-herbal {
+  display: flex;
+  margin: 10px 40px;
+}
+
+.card-text {
+  color: #163172;
+  opacity: 0.8;
+}
+
+.header-lap {
+  display: flex;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.tombol {
+  color: white;
+  background-color: var(--primary);
+  border: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tombol span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.tombol:hover span {
+  transform: scale(1.1);
+}
+
+.btn-info {
+  margin-left: 50px;
+}
+
+/* dokter */
+.dokter-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.dokter-img {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dokter-img img {
+  width: 100%;
+  height: auto; /* ubah ini dari 100% ke auto */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.chat-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%; /* Posisi horizontal tengah */
+  transform: translateX(-50%); /* Geser ke kiri setengah lebarnya */
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  text-decoration: none;
+  width: 120px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+}
+
+.chat-label:hover + img,
+.chat-label:hover ~ img {
+  transform: scale(1.1);
+}
+
+.dokter-info {
+  color: var(--secondary);
+}
+
+.dokter-info h5 {
+  font-weight: 600;
+}
+
+.dokter-info i {
+  margin-right: 6px;
+}
+
+.dokter-info p {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+  .aktivitas-content {
+    flex-direction: column;
+  }
+
+  .left-info,
+  .right-chart {
+    width: 100%;
+  }
+
+  .dokter-info h5 {
+    font-size: 1rem; /* lebih kecil */
+  }
+  .dokter-info p {
+    font-size: 0.7rem;
+  }
+  .chat-label {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+    width: 60px;
+  }
+  .text-justify {
+    margin-right: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dokter-info p {
+    font-size: 1rem;
+  }
+  .chat-label {
+    font-size: 1rem;
+    padding: 3px 6px;
+  }
+
+  .dokter-info h5 {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+
+  .dokter-info i {
+    margin-right: 6px;
+  }
+
+  .dokter-info p {
+    margin-bottom: 0.5rem;
+  }
+
+  .summary {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .baca-juga,
+  .text-justify {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  .container-herbal {
+    flex-direction: column;
+    margin: 10px 20px !important;
+  }
+
+  .d-flex.m-5 {
+    flex-direction: column;
+    margin: 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .dokter-info h5 {
+    font-size: 1rem; /* lebih kecil */
+  }
+  .dokter-info p {
+    font-size: 0.7rem;
+  }
+  .chat-label {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+    width: 60px;
+  }
+}

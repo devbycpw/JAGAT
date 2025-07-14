@@ -1,0 +1,125 @@
+.navbar {
+  width: 100%;
+  background-image: url('../img/bener_semua_konten.png');
+  background-size: cover;
+  background-position: center bottom;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.isi_navbar {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #3fc1c9;
+}
+
+.tulisan_jagat {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3fc1c9;
+}
+
+.tullisan_login_daftar a {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 25px;
+  text-decoration: none;
+  color: #3fc1c9;
+  transition: color 0.3s;
+}
+
+.tullisan_login_daftar a:hover {
+  text-decoration: underline;
+  color: #34a6ad;
+}
+
+body {
+  background-color: #f7f9fc;
+  margin: 0;
+  padding-top: 120px;
+  font-family: Arial, sans-serif;
+}
+
+.isis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.kotak {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h2 {
+  color: #3fc1c9;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.logo svg {
+  width: 80px;
+  height: 80px;
+  fill: #3fc1c9;
+}
+
+.kata-kata {
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.pencetan {
+  background-color: #3fc1c9;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 16px;
+}
+
+.pencetan:hover {
+  background-color: #00a3a3;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 5px;
+}

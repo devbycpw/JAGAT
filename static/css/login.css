@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #0d2b72;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.bi {
+  font-family: 'bootstrap-icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.isi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../img/bg_login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0 5%;
+}
+
+.kotak-login {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+  width: 100%;
+  max-width: 460px;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.judul {
+  font-size: 52px;
+  font-weight: bold;
+  color: #00b6c4;
+  margin-bottom: 14px;
+}
+
+.login_judul {
+  font-size: 36px;
+  margin: 0;
+  color: #1a1a1a;
+  font-weight: normal;
+}
+
+.belum_punya {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #444;
+  font-weight: normal;
+}
+
+.belum_punya a {
+  color: #00b6c4;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.belum_punya a:hover {
+  color: #019fad;
+  text-decoration: underline;
+}
+
+form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #0d2b72;
+  margin-bottom: 26px;
+  outline: none;
+  background-color: transparent;
+}
+
+.password-bungkus {
+  position: relative;
+  width: 100%;
+}
+
+.password-togel {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-togel svg {
+  width: 26px;
+  height: 26px;
+  stroke: #0d2b72;
+}
+
+.pilihan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.pilihan label,
+.pilihan .lupa {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.pilihan .lupa {
+  color: #0d2b72;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.pilihan .lupa:hover {
+  text-decoration: underline;
+}
+
+.pencetan-login {
+  width: 100%;
+  padding: 16px;
+  background-color: #00b6c4;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.pencetan-login:hover {
+  background-color: #019fad;
+}
+
+.btn-login {
+  background-color: #00c2c2;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .isi {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .kotak-login {
+    max-width: 90%;
+    margin: auto;
+    padding: 40px 30px;
+  }
+
+  .judul {
+    font-size: 40px;
+  }
+
+  .login_judul {
+    font-size: 28px;
+  }
+
+  label,
+  input[type="text"],
+  input[type="password"] {
+    font-size: 16px;
+  }
+
+  .pencetan-login {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .isi {
+    flex-direction: column;
+    justify-content: center;
+    background-position: top;
+    background-size: cover;
+    padding: 40px 20px;
+  }
+
+  .kotak-login {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+}

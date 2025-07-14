@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - JAGAT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/login.css" />
+</head>
+<body>
+  <div class="isi">
+    <div class="kotak-login">
+      <h1 class="judul">JAGAT</h1>
+      <h2 class="login_judul">Masuk Akun</h2>
+      <p class="belum_punya">Belum memiliki akun? <a href="register.html">Daftar sekarang</a></p>
+
+      <form>
+        <label for="username">Nama pengguna atau Email</label>
+        <input type="text" id="username" placeholder="Nama pengguna atau Email" required autocomplete="off" />
+
+        <label for="password">Masukan sandi anda</label>
+        <div class="password-bungkus">
+          <input type="password" id="password" placeholder="Masukan sandi anda" required autocomplete="off" />
+           <span class="password-togel" onclick="togglePassword()">
+            <i id="eye-icon" class="bi bi-eye" style="font-size: 24px; color: #0d2b72;"></i>
+          </span>
+        </div>
+
+        <div class="pilihan">
+          <label><input type="checkbox" /> Ingat saya</label>
+          <a href="lupa.html" class="lupa">Lupa sandi ?</a>
+        </div>
+
+        <a href="../templates/index.html" class="btn-login" type="submit" style="color: white; text-decoration: none;">Masuk</a>
+      </form>
+    </div>
+  </div>
+  <script src="../static/js/login.js"></script>
+
+
+</body>
+</html>

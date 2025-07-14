@@ -1,0 +1,270 @@
+:root {
+  --primary: #3fc1c9;
+  --primary-rgb: 63, 193, 201;
+
+  --secondary: #163172;
+  --secondary-rgb: 22, 49, 114;
+
+  --bg-clr: #f5f5f4;
+  --bg-container: #fbfbfb;
+  --secondary-text: #005daa;
+}
+
+.body {
+  font-family: Arial, sans-serif;
+}
+
+.atasan {
+  z-index: 999;
+  color: var(--secondary);
+  box-shadow: 0 4px 16px rgba(63, 193, 201, 0.2); /* opsional: buat var(--primary-rgb) */
+  border: none;
+  width: 100%;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  margin-bottom: 2%;
+}
+
+.banner-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+.search {
+  width: 100%;
+  max-width: 29rem;
+  height: 3.125rem;
+  background-color: rgba(245, 245, 244, 0.8); /* var(--bg-clr) with alpha */
+  border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 1rem rgba(63, 193, 201, 0.2);
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  pointer-events: auto;
+}
+
+.cari_dokter ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-top: 2%;
+}
+
+.search_input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--secondary);
+}
+
+.search_input::placeholder {
+  color: rgba(22, 49, 114, 0.5); /* var(--secondary) dengan transparansi */
+}
+
+.cari_dokter .icon {
+  font-size: 1.25rem;
+  color: var(--secondary);
+  padding-left: 0.5rem;
+  padding-right: 0.625rem;
+}
+
+/* Kategori */
+.kategori {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.kategori ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: 0rem;
+  list-style: none;
+}
+
+.kategori li p {
+  padding: 0.5rem 2rem;
+  background-color: rgba(245, 245, 244, 0.8); /* var(--bg-clr) with alpha */
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.2rem);
+  color: var(--secondary);
+  box-shadow: 0 4px 16px rgba(63, 193, 201, 0.2);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  margin-left: 1rem; /* diperbaiki dari '1' tanpa satuan */
+}
+
+/* Responsive media queries */
+@media (max-width: 768px) {
+  .banner-img {
+    height: 150px;
+  }
+
+  .search {
+    width: 10rem;
+    margin-left: 15px;
+  }
+
+  .cari_dokter ul {
+    margin-top: 0.8%;
+  }
+
+  .kategori li p {
+    padding: 0.3rem 0.8rem;
+  }
+
+  .cari_dokter .icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-img {
+    height: 140px;
+  }
+
+  .search {
+    height: 2.5rem;
+    padding: 0 0.7rem;
+  }
+
+  .kategori li p {
+    font-size: 0.8rem;
+  }
+}
+
+/*isian*/
+.baris {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.card-lapangan {
+  width: 24.375rem;
+  background-color: var(--bg-container);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(63, 193, 201, 0.2);
+  overflow: hidden;
+  margin: 0.5rem;
+  font-family: Arial, sans-serif;
+  color: var(--secondary);
+}
+
+.lapangan-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jenis {
+  padding: 16px;
+}
+
+.tipe {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+
+.sub {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 4px 0;
+  color: var(--secondary);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 4px 0;
+  color: var(--secondary);
+}
+
+.bintang {
+  color: #f1c40f;
+  margin-right: 6px;
+}
+
+.jam-buka,
+.kategorilap {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin: 2px 0;
+}
+
+.jam-buka {
+  margin-left: 20px;
+}
+
+.kategorilap {
+  margin-left: 5px;
+}
+
+.ngisor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.harga {
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.sewa-btn {
+  background-color: var(--primary);
+  border: none;
+  color: var(--bg-clr);
+  padding: 8px 35px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(63, 193, 201, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.sewa-btn:hover {
+  background-color: var(--secondary);
+}
+@media (max-width: 400px){
+  .card-lapangan {
+    margin: 20px;
+  }
+}

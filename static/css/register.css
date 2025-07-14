@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  font-size: 16px;
+}
+
+.bi {
+  font-family: 'bootstrap-icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.isis {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../img/bg_login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.kosongan {
+  flex: 1;
+  min-width: 65%;
+}
+
+.isi_menu {
+  flex: 0 0 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 5% 60px 3%;
+  margin-left: auto;
+}
+
+.kotakan {
+  width: 100%;
+  max-width: 350px;
+}
+
+.judul {
+  font-size: 48px;
+  color: #00c2c2;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.bawah_judul {
+  font-size: 32px;
+  color: #2b2b2b;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.linkke_login {
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+
+.linkke_login a {
+  color: #00c2c2;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.linkke_login a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #00c2c2;
+  transition: width 0.3s ease;
+}
+
+.linkke_login a:hover {
+  color: #00a3a3;
+}
+
+.linkke_login a:hover::after {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+#pin {
+  padding: 14px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.gruping {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.gruping input {
+  flex: 1;
+  padding: 8px 4px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  height: 38px;
+}
+
+.jenis_kelamin {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.jenis_kelamin button {
+  flex: 1;
+  padding: 8px 4px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  height: 38px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.jenis_kelamin button.active {
+  border-color: #0059ff;
+  color: #0059ff;
+  font-weight: 600;
+}
+
+.password_bungkus {
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid #ccc;
+}
+
+.password_bungkus input[type="password"],
+.password_bungkus input[type="text"] {
+  border-bottom: none !important;
+  padding-right: 40px;
+}
+
+.pindah_password {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 14px 12px;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.pindah_password i {
+  font-size: 24px;
+  color: #0d2b72;
+  transition: transform 0.3s ease;
+}
+
+.pindah_password:hover i {
+  transform: scale(1.1);
+}
+
+.pilihan {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 16px;
+}
+
+
+.btn-login {
+  background-color: #00c2c2;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tombol_daftar:hover {
+  background-color: #00a3a3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,194,194,0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .isis {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .kosongan {
+    display: none;
+  }
+
+  .isi_menu {
+    flex: 1;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .kotakan {
+    max-width: 100%;
+  }
+
+  .judul {
+    font-size: 36px;
+  }
+
+  .bawah_judul {
+    font-size: 26px;
+  }
+
+  .gruping input,
+  .jenis_kelamin button {
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .btn-login {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

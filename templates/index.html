@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Smooth</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/style_navbar.css" />
+    <link rel="stylesheet" href="../static/css/home.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="sidebar" id="sidebar">
+      <div class="logo-hamburger">
+        <i class="bi bi-list" id="menu"></i>
+        <h2 class="logo-text">JAGAT</h2>
+      </div>
+      <ul class="menu list-unstyled">
+        <li>
+          <a href="index.html">
+            <i class="bi bi-house"></i>
+            <span class="title">Beranda</span>
+          </a>
+        </li>
+        <li>
+          <a href="lapangan.html">
+            <i class="bi bi-basket3"></i>
+            <span class="title">Sewa Lapangan</span>
+          </a>
+        </li>
+        <li>
+          <a href="komunitas.html">
+            <i class="bi bi-people"></i>
+            <span class="title">Komunitas</span>
+          </a>
+        </li>
+        <li>
+          <a href="dokter.html">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="title">Sapa Dokter</span>
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-profile">
+        <a href="pengaturan.html"
+          ><img src="../static/img/logo_profile.jpg" alt="Profile"
+        /></a>
+        <div class="nickname">
+          <span class="name">Yohaneswidi68</span>
+          <span class="username">@Yantzz</span>
+        </div>
+        <i class="bi bi-three-dots"></i>
+      </div>
+    </div>
+    <!-- akhit navbar -->
+    <!-- content -->
+    <img src="../static/img/bannerbaru.jpeg" alt="Logo" class="logo-banner" />
+    <div class="content">
+      <div class="flex-grow-1">
+        <!-- logo -->
+      </div>
+
+      <div class="card card-aktivitas m-5">
+        <div class="aktivitas-content">
+          <!-- KIRI -->
+          <div class="left-info">
+            <h2>Selamat Siang, Yohanes~~</h2>
+            <p>
+              Hari ini anda sudah cukup aktif secara fisik. <br />
+              Aktivitas cukup intens, bagus untuk jaga berat badan. <br />
+              Tidur minimal (7–9 jam per malam) untuk pemulihan dan performa
+              fisik.
+            </p>
+
+            <div class="summary">
+              <div class="item">
+                <i
+                  class="bi bi-universal-access icon"
+                  style="background-color: #003b64"
+                ></i>
+                <div class="value">
+                  <span class="angka">8.013</span>
+                  <span class="satuan">Langkah</span>
+                </div>
+              </div>
+              <div class="item">
+                <i
+                  class="bi bi-clock icon"
+                  style="background-color: #005daa"
+                ></i>
+                <div class="value">
+                  <span class="angka">2.43</span>
+                  <span class="satuan">Jam</span>
+                </div>
+              </div>
+              <div class="item">
+                <i
+                  class="bi bi-fire icon"
+                  style="background-color: #00acc1"
+                ></i>
+                <div class="value">
+                  <span class="angka">578</span>
+                  <span class="satuan">Kalori</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KANAN (CHART) -->
+          <div class="right-chart">
+            <div class="chart-container">
+              <canvas id="multiRingChart"></canvas>
+              <div class="center-percentage">85%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="row g-4">
+          <!-- Kartu 1 -->
+          <div class="col-md-6">
+            <div class="card-makanan h-100">
+              <div class="macro-top">
+                <div class="macro-info">
+                  <h2>Makanan</h2>
+                  <div class="total-kalori">1.420 Kal</div>
+                </div>
+                <div class="macro-right">
+                  <div class="chart-wrapper">
+                    <canvas id="macroChart1"></canvas>
+                    <div class="chart-center-text">89%</div>
+                  </div>
+                  <div class="macro-indicators">
+                    <div class="indicator">
+                      <span class="dot" style="background: #b2ebf2"></span>
+                      <span class="label">Karbo</span>
+                      <span class="value">73.7 g</span>
+                    </div>
+                    <div class="indicator">
+                      <span class="dot" style="background: #00acc1"></span>
+                      <span class="label">Lemak</span>
+                      <span class="value">7.1 g</span>
+                    </div>
+                    <div class="indicator">
+                      <span class="dot" style="background: #003b64"></span>
+                      <span class="label">Protein</span>
+                      <span class="value">24.4 g</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="macro-footer">
+                <div class="footer-text">Target Kalori Anda Hari Ini</div>
+                <div class="footer-value">1.600 Kal</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu 2 -->
+          <div class="col-md-6">
+            <div class="card-makanan h-100">
+              <div
+                class="macro-top"
+                style="
+                  margin-top: 20px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 20px;
+                "
+              >
+                <!-- Kiri: Judul dan Total Jam -->
+                <div class="macro-info">
+                  <h2>Tidur</h2>
+                  <div class="total-kalori">6.31 Jam</div>
+                </div>
+
+                <!-- Kanan: Bar dan Persen -->
+                <div class="macro-right">
+                  <div class="bar-wrapper">
+                    <div class="bar-container" id="barContainer2">
+                      <div class="bar-fill" id="barFill2"></div>
+                      <div class="bar-label" id="barLabel2">79%</div>
+                    </div>
+                    <div class="range-labels">
+                      <span>0</span>
+                      <span>8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="macro-footer">
+                <div class="footer-text">Target Tidur Anda Hari Ini</div>
+                <div class="footer-value">8 Jam</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu 3 -->
+          <div class="col-md-6">
+            <div class="card-makanan h-100">
+              <div
+                class="macro-top"
+                style="
+                  margin-top: 20px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 20px;
+                "
+              >
+                <!-- Kiri: Judul dan Total Jam -->
+                <div class="macro-info">
+                  <h2>Berjalan</h2>
+                  <div class="total-kalori">8.980 Langkah</div>
+                </div>
+
+                <!-- Kanan: Bar dan Persen -->
+                <div class="macro-right">
+                  <div class="bar-wrapper">
+                    <div class="bar-container" id="barContainer3">
+                      <div class="bar-fill" id="barFill3"></div>
+                      <div class="bar-label" id="barLabel3">79%</div>
+                    </div>
+                    <div class="range-labels">
+                      <span>0</span>
+                      <span>10.000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="macro-footer">
+                <div class="footer-text">Target Langkah Anda Hari Ini</div>
+                <div class="footer-value">10.000 Langkah</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu 4 -->
+          <div class="col-md-6">
+            <div class="card-makanan h-100">
+              <div
+                class="macro-top"
+                style="
+                  margin-top: 20px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 20px;
+                "
+              >
+                <!-- Kiri: Judul dan Total Jam -->
+                <div class="macro-info">
+                  <h2>Olahraga</h2>
+                  <div class="total-kalori">2.43 Jam</div>
+                </div>
+
+                <!-- Kanan: Bar dan Persen -->
+                <div class="macro-right">
+                  <div class="bar-wrapper">
+                    <div class="bar-container" id="barContainer4">
+                      <div class="bar-fill" id="barFill4"></div>
+                      <div class="bar-label" id="barLabel4">79%</div>
+                    </div>
+                    <div class="range-labels">
+                      <span>0</span>
+                      <span>3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="macro-footer">
+                <div class="footer-text">Target Olahraga Anda Hari ini</div>
+                <div class="footer-value">3 Jam</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- akhir container diagram -->
+      <h2 class="baca-juga">
+        Baca juga artikel terkini<span>tentang kesehatan</span>
+      </h2>
+      <div class="d-flex m-5">
+        <!-- cengkeh -->
+        <div class="col-md-4">
+          <div class="m-2 h-100">
+            <div class="zoom-wrapper position-relative">
+              <a
+                href="https://www.biofarma.co.id/id/announcement/detail/manfaat-cengkeh-untuk-kesehatan-yang-perlu-kamu-ketahui"
+                ><img
+                  src="../static/img/cengkeh.jpg"
+                  class="card-img-top img-zoom-hover"
+                  alt="Cengkeh"
+              /></a>
+              <div class="image-text">
+                <a href="#" class="text-decoration-none"
+                  ><h6 class="image-title">
+                    Manfaat Cengkeh untuk Kesehatan yang Perlu Kamu Ketahui
+                  </h6></a
+                >
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text small mt-2">
+                Ketahui juga kandungan pohon cengkeh, khasiat eugenol, dan tips
+                konsumsi cengkeh yang aman untuk menjaga kesehatan tubuh secara
+                alami...
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- sereh -->
+        <div class="col-md-4">
+          <div class="m-2 h-100">
+            <div class="zoom-wrapper position-relative">
+              <a href="#"
+                ><img
+                  src="../static/img/sere.jpg"
+                  class="card-img-top img-zoom-hover"
+                  alt="Cengkeh"
+              /></a>
+              <div class="image-text">
+                <a
+                  href="https://www.biofarma.co.id/id/announcement/detail/7-manfaat-minum-air-sereh-setiap-hari-untuk-kesehatan-tubuh-dan-kulit"
+                  class="text-decoration-none"
+                  ><h6 class="image-title">
+                    7 Manfaat Minum Air Sereh Setiap Hari untuk Kesehatan Tubuh
+                    dan Kulit
+                  </h6></a
+                >
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text small mt-2">
+                Apakah kamu sering minum air Sereh atau teh Sereh? Selain
+                aromanya yang menenangkan, minuman herbal ini ternyata
+                menyimpan...
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- bawang -->
+        <div class="col-md-4">
+          <div class="m-2 h-100">
+            <div class="zoom-wrapper position-relative">
+              <a
+                href="https://www.biofarma.co.id/id/announcement/detail/bawang-putih-bisa-cegah-penyakit-ini-7-khasiatnya-yang-terbukti"
+                ><img
+                  src="../static/img/bawang.jpg"
+                  class="card-img-top img-zoom-hover"
+                  alt="Cengkeh"
+              /></a>
+              <div class="image-text">
+                <a href="#" class="text-decoration-none"
+                  ><h6 class="image-title">
+                    7 Manfaat Minum Air Sereh Setiap Hari untuk Kesehatan Tubuh
+                    dan Kulit
+                  </h6></a
+                >
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text small mt-2">
+                Apakah kamu sering minum air Sereh atau teh Sereh? Selain
+                aromanya yang menenangkan, minuman herbal ini ternyata
+                menyimpan...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- lap -->
+      <h2 class="baca-juga">Sewa Lapangan</h2>
+      <p class="text-justify">
+        Yuk, manfaatkan menu Sewa Lapangan untuk memesan lapangan olahraga
+        dengan mudah dan cepat! Di sini, kamu bisa memilih jenis lapangan sesuai
+        kebutuhan, melihat jadwal yang tersedia, dan langsung melakukan
+        pemesanan tanpa harus datang langsung. Cocok banget buat kamu yang ingin
+        bermain futsal, badminton, atau olahraga lainnya bersama teman-teman.
+        Jangan tunggu lama, jadwalkan sekarang dan rasakan kemudahan sewa
+        lapangan hanya dalam beberapa klik!
+      </p>
+
+      <div class="container-herbal">
+        <!-- lap 1 -->
+        <div class="col-md-4">
+          <div class="m-2 h-100">
+            <div class="zoom-wrapper position-relative">
+              <a href="#"
+                ><img
+                  src="../static/img/lap/basket.jpg"
+                  class="card-img-top img-zoom-hover"
+                  alt="Cengkeh"
+              /></a>
+              <div class="image-text">
+                <a href="#" class="text-decoration-none"
+                  ><h6 class="image-title">
+                    <span class="header-lap">Outdoor</span>
+                    <span class="header-lap">Arena Garuda Mini Soccer</span>
+                    <span class="d-inline-flex gap-3"
+                      ><i class="bi bi-star-fill"></i>4.75 • Kota Jakarta</span
+                    >
+                  </h6></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- lap 2 -->
+        <div class="col-md-4">
+          <div class="m-2 h-100">
+            <div class="zoom-wrapper position-relative">
+              <a href="#"
+                ><img
+                  src="../static/img/lap/bowling.webp"
+                  class="card-img-top img-zoom-hover"
+                  alt="Cengkeh"
+              /></a>
+              <div class="image-text">
+                <a href="#" class="text-decoration-none"
+                  ><h6 class="image-title">
+                    <span class="header-lap">Outdoor</span>
+                    <span class="header-lap">Arena Garuda Mini Soccer</span>
+                    <span class="d-inline-flex gap-3"
+                      ><i class="bi bi-star-fill"></i>4.75 • Kota Jakarta</span
+                    >
+                  </h6></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- lap 3 -->
+        <div class="col-md-4">
+          <div class="m-2 h-100">
+            <div class="zoom-wrapper position-relative">
+              <a href="#"
+                ><img
+                  src="../static/img/lap/golf.jpg"
+                  class="card-img-top img-zoom-hover"
+                  alt="Cengkeh"
+              /></a>
+              <div class="image-text">
+                <a href="#" class="text-decoration-none"
+                  ><h6 class="image-title">
+                    <span class="header-lap">Outdoor</span>
+                    <span class="header-lap">Arena Garuda Mini Soccer</span>
+                    <span class="d-inline-flex gap-3"
+                      ><i class="bi bi-star-fill"></i>4.75 • Kota Jakarta</span
+                    >
+                  </h6></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-herbal">
+        <!-- lap 4 -->
+        <div class="col-md-4">
+          <div class="m-2 h-100">
+            <div class="zoom-wrapper position-relative">
+              <a href="#"
+                ><img
+                  src="../static/img/lap/tennes_meja.avif"
+                  class="card-img-top img-zoom-hover"
+                  alt="Cengkeh"
+              /></a>
+              <div class="image-text">
+                <a href="#" class="text-decoration-none"
+                  ><h6 class="image-title">
+                    <span class="header-lap">Outdoor</span>
+                    <span class="header-lap">Arena Garuda Mini Soccer</span>
+                    <span class="d-inline-flex gap-3"
+                      ><i class="bi bi-star-fill"></i>4.75 • Kota Jakarta</span
+                    >
+                  </h6></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- lap 5 -->
+        <div class="col-md-4">
+          <div class="m-2 h-100">
+            <div class="zoom-wrapper position-relative">
+              <a href="#"
+                ><img
+                  src="../static/img/lap/padel.webp"
+                  class="card-img-top img-zoom-hover"
+                  alt="Cengkeh"
+              /></a>
+              <div class="image-text">
+                <a href="#" class="text-decoration-none"
+                  ><h6 class="image-title">
+                    <span class="header-lap">Outdoor</span>
+                    <span class="header-lap">Arena Garuda Mini Soccer</span>
+                    <span class="d-inline-flex gap-3"
+                      ><i class="bi bi-star-fill"></i>4.75 • Kota Jakarta</span
+                    >
+                  </h6></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- lap 6 -->
+        <div class="col-md-4">
+          <div class="m-2 h-100">
+            <div class="zoom-wrapper position-relative">
+              <a href="#"
+                ><img
+                  src="../static/img/lap/tennis.jpg"
+                  class="card-img-top img-zoom-hover"
+                  alt="Cengkeh"
+              /></a>
+              <div class="image-text">
+                <a href="#" class="text-decoration-none"
+                  ><h6 class="image-title">
+                    <span class="header-lap">Outdoor</span>
+                    <span class="header-lap">Arena Garuda Mini Soccer</span>
+                    <span class="d-inline-flex gap-3"
+                      ><i class="bi bi-star-fill"></i>4.75 • Kota Jakarta</span
+                    >
+                  </h6></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="tombol" style="margin-left: 40px">
+        <a href="lapangan.html" style="color: white">
+          <span>Selengkapnya <i class="bi bi-caret-right-fill"></i></span
+        ></a>
+      </button>
+      <h2 class="baca-juga text-center">Sapa Dokter</h2>
+      <p
+        class="text-center"
+        style="
+          margin: 0px 70px;
+          color: #163172;
+          opacity: 0.8;
+          font-size: medium;
+        "
+      >
+        Pernah merasa bingung soal kondisi kesehatan tapi malas ke klinik atau
+        gak sempat ke rumah sakit? Sekarang kamu gak perlu khawatir lagi!
+        Gunakan menu Chat dengan Dokter untuk mendapatkan konsultasi langsung
+        dengan tenaga medis profesional kapan saja dan di mana saja. Fitur ini
+        dirancang khusus buat kamu yang butuh jawaban cepat seputar keluhan
+        kesehatan, informasi obat, gejala penyakit, atau sekadar ingin tahu
+        kondisi tubuhmu lebih lanjut. Cukup buka aplikasinya, pilih menu Chat
+        dengan Dokter, dan kamu bisa mulai ngobrol dengan dokter secara
+        real-time – tanpa antre, tanpa biaya transportasi, dan tanpa ribet.
+        Cocok banget buat kamu yang punya aktivitas padat tapi tetap peduli
+        dengan kesehatan. Yuk, manfaatkan kemudahan ini sekarang juga.
+        Kesehatanmu penting, jadi jangan tunda untuk bertanya. Dokter siap bantu
+        kamu kapan pun dibutuhkan!
+      </p>
+      <div class="text-center m-2">
+        <button type="button" class="tombol">
+          <a href="dokter.html" style="color: white">
+            <span>Selengkapnya <i class="bi bi-caret-right-fill"></i></span
+          ></a>
+        </button>
+      </div>
+
+      <div class="container py-4 container-utama-dokter">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Dokter 1 -->
+          <div class="col">
+            <div class="d-flex dokter-card">
+              <div class="col-4 dokter-img">
+                <img src="../static/img/dokter/1.jpg" alt="dr. Gerry" />
+                <a href="chat.html" class="chat-label">Chat</a>
+              </div>
+              <div class="col-8 p-3 dokter-info">
+                <h5>dr. Gerry Septiyanto, Sp.KP</h5>
+                <p>Doktor spesialis kelamin pria</p>
+                <p>
+                  <i class="bi bi-mortarboard-fill"></i>Alumni Universitas
+                  Kristen Satya Wacana
+                </p>
+                <p>
+                  <i class="bi bi-hospital"></i>Praktik di RSIA Harapan Ibu,
+                  Yogyakarta
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dokter 2 -->
+          <div class="col">
+            <div class="d-flex dokter-card">
+              <div class="col-4 dokter-img">
+                <img src="../static/img/dokter/2.jpg" alt="dr. Bima" />
+                <a href="chat.html" class="chat-label">Chat</a>
+              </div>
+              <div class="col-8 p-3 dokter-info">
+                <h5>dr. Bima Nugroho, Sp.G</h5>
+                <p>Doktor spesialis gigi</p>
+                <p>
+                  <i class="bi bi-mortarboard-fill"></i>Alumni Universitas
+                  Kristen Satya Wacana
+                </p>
+                <p>
+                  <i class="bi bi-hospital"></i>Praktik di RS Mitra Sehat,
+                  Surabaya
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dokter 3 -->
+          <div class="col">
+            <div class="d-flex dokter-card">
+              <div class="col-4 dokter-img">
+                <img src="../static/img/dokter/3.jpg" alt="dr. Andini" />
+                <a href="chat.html" class="chat-label">Chat</a>
+              </div>
+              <div class="col-8 p-3 dokter-info">
+                <h5>dr. Andini Prameswari, Sp.A</h5>
+                <p>Doktor spesialis anak</p>
+                <p>
+                  <i class="bi bi-mortarboard-fill"></i>Alumni Universitas
+                  Kristen Satya Wacana
+                </p>
+                <p>
+                  <i class="bi bi-hospital"></i>Praktik di RSIA Harapan Ibu,
+                  Yogyakarta
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dokter 4 -->
+          <div class="col">
+            <div class="d-flex dokter-card">
+              <div class="col-4 dokter-img">
+                <img src="../static/img/dokter/4.jpg" alt="dr. Denny" />
+                <a href="chat.html" class="chat-label">Chat</a>
+              </div>
+              <div class="col-8 p-3 dokter-info">
+                <h5>dr. Denny Yudha, Sp.P</h5>
+                <p>Doktor spesialis paru-paru</p>
+                <p>
+                  <i class="bi bi-mortarboard-fill"></i>Alumni Universitas
+                  Kristen Satya Wacana
+                </p>
+                <p>
+                  <i class="bi bi-hospital"></i>Praktik di RSUD Kota Bandung,
+                  Bandung
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- Kolom 1: Tentang Kami -->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title">Sehat Bersama</h5>
+            <p>
+              Platform kesehatan terpercaya yang menyediakan informasi medis
+              akurat, layanan konsultasi dokter, dan tips hidup sehat
+              sehari-hari.
+            </p>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Kolom 2: Link Cepat -->
+          <div class="col-md-2 mb-4 mb-md-0">
+            <h5 class="footer-title">Link Cepat</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#"><i class="bi bi-chevron-right me-2"></i>Beranda</a>
+              </li>
+              <li class="mb-2">
+                <a href="./lapangan.html"
+                  ><i class="bi bi-chevron-right me-2"></i>Sewa Lapangan</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="./komunitas.html"
+                  ><i class="bi bi-chevron-right me-2"></i>Komunitas</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="./dokter.html"
+                  ><i class="bi bi-chevron-right me-2"></i>Dokter</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kolom 3: Layanan -->
+          <div class="col-md-3 mb-4 mb-md-0">
+            <h5 class="footer-title">Layanan Kami</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="./chat.html"
+                  ><i class="bi bi-heart-pulse me-2"></i>Konsultasi Online</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="./chatlapangan.html"
+                  ><i class="bi bi-calendar-check me-2"></i>Booking Lapangan</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="https://www.biofarma.co.id/"
+                  ><i class="bi bi-capsule me-2"></i>Info Kesehatan</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kolom 4: Kontak -->
+          <div class="col-md-3">
+            <h5 class="footer-title">Hubungi Kami</h5>
+            <div class="contact-info">
+              <p class="mb-3">
+                <i class="bi bi-geo-alt"></i> Jl. Kesehatan No. 123, Jakarta
+              </p>
+              <p class="mb-3">
+                <i class="bi bi-telephone"></i> (021) 1234-5678
+              </p>
+              <p class="mb-3">
+                <i class="bi bi-envelope"></i> info@sehatbersama.com
+              </p>
+              <p class="mb-3">
+                <i class="bi bi-clock"></i> Senin-Minggu, 08:00 - 22:00 WIB
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="mb-0">
+                &copy; 2023 Sehat Bersama. Semua hak dilindungi.
+              </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <a href="#" class="me-3">Kebijakan Privasi</a>
+              <a href="#" class="me-3">Syarat & Ketentuan</a>
+              <a href="#">Sitemap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>

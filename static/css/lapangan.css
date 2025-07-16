@@ -17,7 +17,7 @@
 .atasan {
   z-index: 999;
   color: var(--secondary);
-  box-shadow: 0 4px 16px rgba(63, 193, 201, 0.2); /* opsional: buat var(--primary-rgb) */
+  box-shadow: 0 4px 16px rgba(63, 193, 201, 0.2); 
   border: none;
   width: 100%;
   overflow: hidden;
@@ -79,7 +79,7 @@
 }
 
 .search_input::placeholder {
-  color: rgba(22, 49, 114, 0.5); /* var(--secondary) dengan transparansi */
+  color: rgba(22, 49, 114, 0.5); 
 }
 
 .cari_dokter .icon {
@@ -89,7 +89,6 @@
   padding-right: 0.625rem;
 }
 
-/* Kategori */
 .kategori {
   display: flex;
   justify-content: center;
@@ -109,7 +108,7 @@
 
 .kategori li p {
   padding: 0.5rem 2rem;
-  background-color: rgba(245, 245, 244, 0.8); /* var(--bg-clr) with alpha */
+  background-color: rgba(245, 245, 244, 0.8); 
   border-radius: 20px;
   font-weight: 500;
   font-size: clamp(0.8rem, 1vw + 0.5rem, 1.2rem);
@@ -120,10 +119,9 @@
   align-items: center;
   justify-content: center;
   margin-right: 1rem;
-  margin-left: 1rem; /* diperbaiki dari '1' tanpa satuan */
+  margin-left: 1rem; 
 }
 
-/* Responsive media queries */
 @media (max-width: 768px) {
   .banner-img {
     height: 150px;
@@ -162,7 +160,6 @@
   }
 }
 
-/*isian*/
 .baris {
   flex-wrap: wrap;
   align-items: center;

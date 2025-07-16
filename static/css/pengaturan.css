@@ -94,7 +94,7 @@ body {
 }
 
 .perangkat:hover {
-  background-color: #009ec0; /* Tidak ada variable, pakai tetap */
+  background-color: #009ec0; 
   color: white;
   transition: 0.3s ease;
 }

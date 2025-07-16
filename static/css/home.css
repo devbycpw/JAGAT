@@ -17,14 +17,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  /* max-width: 1000px; */
   margin: auto;
 }
 
 .logo-banner {
-  /* position: absolute; */
-  
-
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -126,7 +122,6 @@ h2 {
   color: #333;
 }
 
-/* gpt */
 .card-aktivitas .aktivitas-content {
   display: flex;
   justify-content: space-between;
@@ -152,7 +147,6 @@ h2 {
   height: 200px;
 }
 
-/* gpt2 */
 .summary {
   display: flex;
   justify-content: space-between;
@@ -213,7 +207,6 @@ h2 {
   gap: 30px;
 }
 
-/* ─── Kiri: Judul & Total ─── */
 .macro-info h2 {
   font-size: 20px;
   color: #002f6c;
@@ -225,7 +218,6 @@ h2 {
   color: #002f6c;
 }
 
-/* ─── Kanan: Chart + Indikator ─── */
 .macro-right {
   display: flex;
   align-items: center;
@@ -275,7 +267,7 @@ h2 {
   flex: 1;
 }
 
-/* ─── Footer: Target Kalori ─── */
+/* Target Kalori */
 .macro-footer {
   display: flex;
   justify-content: space-between;
@@ -384,12 +376,11 @@ h2 {
   font-weight: bold;
   margin-left: 50px;
   margin-top: 50px;
-  color: var(--secondary); /* opsional: warna lebih ringan */
+  color: var(--secondary); 
 }
 .baca-juga span {
   display: block;
-  /* font-weight: normal; opsional: buat beda dengan h2 */
-  color: var(--secondary); /* opsional: warna lebih ringan */
+  color: var(--secondary);
   font-weight: bold;
 }
 
@@ -405,7 +396,7 @@ h2 {
   overflow: hidden;
   border-radius: 8px;
   position: relative;
-  aspect-ratio: 3 / 2; /* Tambahkan ini untuk jaga rasio */
+  aspect-ratio: 3 / 2;
 }
 
 .img-zoom-hover {
@@ -421,7 +412,6 @@ h2 {
   transform: scale(1.1);
 }
 
-/* Area teks di atas gambar */
 .image-text {
   position: absolute;
   bottom: 0;
@@ -432,7 +422,6 @@ h2 {
   box-sizing: border-box;
 }
 
-/* Judul default */
 .image-title {
   color: rgb(255, 255, 255);
   font-size: 1rem;
@@ -444,7 +433,6 @@ h2 {
   color: #ffb823;
 }
 
-/* Saat .zoom-wrapper (termasuk gambar) di-hover, ubah warna judul */
 .zoom-wrapper:hover .image-title {
   color: #ffb823;
   cursor: pointer;
@@ -512,7 +500,7 @@ h2 {
 
 .dokter-img img {
   width: 100%;
-  height: auto; /* ubah ini dari 100% ke auto */
+  height: auto; 
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -520,8 +508,8 @@ h2 {
 .chat-label {
   position: absolute;
   bottom: 10px;
-  left: 50%; /* Posisi horizontal tengah */
-  transform: translateX(-50%); /* Geser ke kiri setengah lebarnya */
+  left: 50%; 
+  transform: translateX(-50%); 
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
@@ -535,8 +523,7 @@ h2 {
   justify-content: center;
 }
 
-.chat-label:hover + img,
-.chat-label:hover ~ img {
+.dokter-img:hover img {
   transform: scale(1.1);
 }
 
@@ -556,7 +543,6 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-/* Responsive Layout */
 @media (max-width: 1200px) {
   .aktivitas-content {
     flex-direction: column;
@@ -568,7 +554,7 @@ h2 {
   }
 
   .dokter-info h5 {
-    font-size: 1rem; /* lebih kecil */
+    font-size: 1rem; 
   }
   .dokter-info p {
     font-size: 0.7rem;
@@ -629,7 +615,7 @@ h2 {
 
 @media (max-width: 576px) {
   .dokter-info h5 {
-    font-size: 1rem; /* lebih kecil */
+    font-size: 1rem; 
   }
   .dokter-info p {
     font-size: 0.7rem;

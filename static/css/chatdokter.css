@@ -6,7 +6,6 @@
   --bg-container: #fbfbfb;
 }
 
-/* BODY */
 body {
   display: flex;
   flex-direction: column;
@@ -37,7 +36,6 @@ body {
   color: var(--secondary);
 }
 
-/* Chat Container */
 .isichat {
   display: flex;
   flex: 1;
@@ -45,7 +43,6 @@ body {
   color: var(--secondary);
 }
 
-/* Sidebar */
 .chat-sidebar {
   width: 21.875rem;
   background-color: var(--bg-clr);
@@ -130,7 +127,6 @@ body {
   color: var(--secondary);
 }
 
-/* Main Chat Area */
 .chat-main {
   flex: 1;
   display: flex;
@@ -189,7 +185,6 @@ body {
   margin-top: 0.3125rem;
 }
 
-/* Chat Input */
 .chat-input {
   padding: 0.9375rem;
   background-color: var(--bg-clr);
@@ -250,7 +245,6 @@ body {
   padding: 0.3125rem;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .chat-sidebar {
     width: 18.75rem;
